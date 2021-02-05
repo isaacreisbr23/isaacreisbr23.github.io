@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Minha homepage</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body{
+				font-family: sans-serif;
+			}
+			.Horarios{
+				position: fixed;
+				top:0;
+				bottom:0;
+				left:150;
+				display: none;
+				margin: auto;
+				width: 300px;
+				height: 150px;
+				padding: 15px;
+			}
+			.HorAula{
+				background: lightgreen;
+				width: 60px;
+				border-style: groove;
+
+			}
+			.HorAula a{
+				text-decoration: none;
+			}
+		</style>
+		<script type="text/javascript">
+			function abrir(){
+				document.getElementById("Horarios").style.display = 'block';
+				var HorBT = document.getElementById("HorAula")
+				HorBT.style.background="black";
+				HorBT.style.color="white"
+
+			}
+			function fechar(){
+				document.getElementById("Horarios").style.display = 'none';
+				var HorBT = document.getElementById("HorAula")
+				HorBT.style.background="lightgreen";
+				HorBT.style.color="black"
+			}
+		</script>
+	</head>
+	<body>
+		<h1 id="titulo1" class="titulos">Home</h1>
+		<div id="Horarios" class="Horarios">
+			<h3>Horarios</h3>
+			<img src="horario de aulas.png">
+		</div>
+		<div class="HorAula" id="HorAula">
+			<h6 id="AbHor" href="javascript: abrir();" onmouseover="abrir();" onmouseleave="fechar();">horarios de aula</h6>
+		</div>
+
+
+	</body>
+</html>
